@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-
 import com.example.demo.model.Doctor;
 import com.example.demo.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +20,9 @@ public class DoctorController {
         return service.getAllDoctors();
     }
 
-    @GetMapping("/{ssn}")
-    public Optional<Doctor> getDoctor(@PathVariable String ssn) {
-        return service.getDoctorById(ssn);
+    @GetMapping("/{doctorId}")
+    public Optional<Doctor> getDoctor(@PathVariable Integer doctorId) {
+        return service.getDoctorById(doctorId);
     }
 
     @PostMapping
@@ -32,7 +31,7 @@ public class DoctorController {
     }
 
     @DeleteMapping("/{ssn}")
-    public void deleteDoctor(@PathVariable String ssn) {
-        service.deleteDoctor(ssn);
+    public void deleteDoctor(@PathVariable Integer doctorId) {
+        service.deleteDoctor(doctorId);
     }
 }

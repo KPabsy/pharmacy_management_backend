@@ -19,15 +19,15 @@ public class DoctorService {
         return repo.findAll();
     }
 
-    public Optional<Doctor> getDoctorById(String ssn) {
-        return repo.findById(ssn);
+    public Optional<Doctor> getDoctorById(Integer doctorId) {
+        return repo.findById(doctorId);
     }
 
     public Doctor saveDoctor(Doctor doctor) {
         return repo.save(doctor);
     }
 
-    public void deleteDoctor(String ssn) {
-        repo.deleteById(ssn);
+    public void deleteDoctor(Integer doctorId) {
+        repo.deleteById(doctorId);
     }
 }

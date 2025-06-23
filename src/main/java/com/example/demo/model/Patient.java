@@ -3,9 +3,8 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Data
 @Entity
-@Table(name = "patient")
+@Data
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +16,6 @@ public class Patient {
     private int age;
     private String gender;
     private String email;
-
 }
 
 

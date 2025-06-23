@@ -23,8 +23,8 @@ public class PatientController {
     }
 
     @GetMapping("/{ssn}")
-    public Optional<Patient> getPatient(@PathVariable String ssn) {
-        return service.getPatientById(ssn);
+    public Optional<Patient> getPatient(@PathVariable Integer doctorId) {
+        return service.getPatientById(doctorId);
     }
 
     @PostMapping
@@ -33,7 +33,7 @@ public class PatientController {
     }
 
     @DeleteMapping("/{ssn}")
-    public void deletePatient(@PathVariable String ssn) {
-        service.deletePatient(ssn);
+    public void deletePatient(@PathVariable Integer doctorId) {
+        service.deletePatient(doctorId);
     }
 }
